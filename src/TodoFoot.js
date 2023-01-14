@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 export default function ({todoList, setTodoList, isComplated, setIsComplated}) {
 
-  useEffect(() => {
-    setIsComplated(todoList.filter((el) => el.isComplated).length)
-  }, [todoList])
+  setIsComplated(todoList.filter((el) => el.isComplated).length)
 
   return (
     <div>

@@ -1,5 +1,5 @@
 import React from 'react'
-export default function TodoBody({todoList, setTodoList, isComplated, setIsComplated}) {
+export default function TodoBody({todoList, setTodoList, setIsComplated}) {
 
   return (
     <div>

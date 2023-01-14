@@ -23,12 +23,12 @@ export default function TodoHead({todoList, setTodoList}) {
             ])
     
             setIdCount(() => idCount + 1)
-    
-            setInputValue("")
         }else{
             alert("Mutqagreq voreve ban")
-            setInputValue("")
         }
+
+        setInputValue("")
+        
         }}>Add todo!</button>
     </div>
   )
