@@ -1,6 +1,10 @@
 import React from 'react'
+import { useContext } from 'react'
+import { Context } from './App'
 
-export default function ({todoList, setTodoList, isComplated, setIsComplated}) {
+export default function () {
+
+  const {todoList, setTodoList, isComplated, setIsComplated} = useContext(Context)
 
   setIsComplated(todoList.filter((el) => el.isComplated).length)
 

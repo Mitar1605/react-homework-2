@@ -1,7 +1,10 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { Context } from './App';
 
-export default function TodoHead({todoList, setTodoList}) {
+export default function TodoHead() {
+
+  const {todoList, setTodoList} = useContext(Context)
 
     const [inputValue, setInputValue] = useState("")
     const [idCount, setIdCount] = useState(0)

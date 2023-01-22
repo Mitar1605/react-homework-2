@@ -1,5 +1,9 @@
 import React from 'react'
-export default function TodoBody({todoList, setTodoList, setIsComplated}) {
+import { useContext } from 'react'
+import { Context } from './App'
+export default function TodoBody() {
+
+    const {todoList, setTodoList, setIsComplated} = useContext(Context)
 
   return (
     <div>

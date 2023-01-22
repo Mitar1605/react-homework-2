@@ -1,8 +1,11 @@
 import './App.css';
+import React from 'react';
 import TodoHead from './TodoHead';
 import TodoBody from './TodoBody';
 import TodoFoot from './TodoFoot';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
+
+export const Context = createContext()
 
 function App() {
 
@@ -11,9 +14,11 @@ function App() {
 
   return (
     <div className="App">
-      <TodoHead todoList={todoList} setTodoList={setTodoList}/>
-      <TodoBody todoList={todoList} setTodoList={setTodoList} isComplated={isComplated} setIsComplated={setIsComplated}/>
-      <TodoFoot todoList={todoList} setTodoList={setTodoList} isComplated={isComplated} setIsComplated={setIsComplated}/>
+      <Context.Provider value={{todoList, setTodoList, isComplated, setIsComplated}}>  
+        <TodoHead/>
+        <TodoBody/>
+        <TodoFoot/>
+      </Context.Provider>
     </div>
   );
 }
